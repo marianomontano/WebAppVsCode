@@ -5,13 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/vsCodeIntroUi/bin/Debug/netcoreapp3.1/vsCodeIntroUi.dll",
+            "program": "${workspaceFolder}/IntroUi/bin/Debug/netcoreapp3.1/IntroUi.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/vsCodeIntroUi",
+            "cwd": "${workspaceFolder}/IntroUi",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
@@ -23,13 +30,8 @@
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
             }
-        },
-        {
-            "name": "Launch Chrome",
-            "request": "launch",
-            "type": "pwa-chrome",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
         }
+
+        
     ]
 }
