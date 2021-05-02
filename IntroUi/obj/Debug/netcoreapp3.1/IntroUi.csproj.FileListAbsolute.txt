@@ -75,3 +75,4 @@
 /home/mariano/Source/vsCodeIntro/IntroUi/obj/Debug/netcoreapp3.1/IntroUi.dll
 /home/mariano/Source/vsCodeIntro/IntroUi/obj/Debug/netcoreapp3.1/IntroUi.pdb
 /home/mariano/Source/vsCodeIntro/IntroUi/obj/Debug/netcoreapp3.1/IntroUi.genruntimeconfig.cache
+/home/mariano/Source/vsCodeIntro/IntroUi/obj/Debug/netcoreapp3.1/Razor/Views/Album/Index.cshtml.g.cs
