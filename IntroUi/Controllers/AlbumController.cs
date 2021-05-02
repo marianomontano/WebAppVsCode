@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using IntroUi.Models;
+using IntroUi.ViewModels;
 
 namespace IntroUi.Controllers
 {
@@ -49,6 +50,43 @@ namespace IntroUi.Controllers
             albums = albums.Skip(pageSkip).Take(10).ToList();
 
             return View(albums);
+        }
+
+        [HttpGet]
+        [Route("Album/Details/{albumId?}")]
+        public IActionResult Details(int? albumId)
+        {
+            long id = Convert.ToInt32(albumId);
+            var album = _context.Albums.Find(id);
+            if(album == null)
+            {
+                return NotFound();
+            }
+
+            var albumDetails = _context.Albums
+                .Include(a => a.Artist)
+                .Include(a => a.Tracks)
+                .Where(a => a.AlbumId == albumId)
+                .Select(d => new AlbumDetailViewModel
+                {
+                    AlbumId = d.AlbumId,
+                    Title = d.Title,
+                    Artist = d.Artist.Name,
+                    Tracks = d.Tracks
+                        .ToList()
+                        .Select(t => 
+                            new TrackViewModel
+                            {
+                                TrackId = (int) t.TrackId,
+                                Name = t.Name,
+                                Duration = (int) t.Milliseconds / 1000,
+                                Genre = t.Genre.Name,
+                                Price = t.UnitPrice
+                            }
+                        ).ToList()
+                }).First();
+
+            return View(albumDetails);
         }
     }
 }
