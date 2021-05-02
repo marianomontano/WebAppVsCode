@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/vsCodeIntroUi/vsCodeIntroUi.csproj",
+                "${workspaceFolder}/IntroUi/IntroUi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/vsCodeIntroUi/vsCodeIntroUi.csproj",
+                "${workspaceFolder}/IntroUi/IntroUi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,12 +32,12 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/vsCodeIntroUi/vsCodeIntroUi.csproj",
+                "${workspaceFolder}/IntroUi/IntroUi.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile",
-            "options": { "cwd": "${workspaceFolder}/vsCodeIntroUi" }
+            "options": { "cwd": "${workspaceFolder}/IntroUi" }
         }
     ]
 }

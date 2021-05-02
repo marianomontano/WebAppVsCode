@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using IntroUi.Models;
 
 namespace IntroUi
 {
@@ -24,6 +25,7 @@ namespace IntroUi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<ChinookContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
