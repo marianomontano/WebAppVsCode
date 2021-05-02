@@ -1,0 +1,63 @@
+@model IEnumerable<IntroUi.Models.Album>;
+@{
+    ViewData["Title"] = "Albums";
+}
+
+<h1>Listado de álbumes disponibles</h1>
+
+@using (Html.BeginForm("Index", "Album", FormMethod.Post))
+{
+<div class="container">
+    <div>
+        <h3>Filtros</h3>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="filtroCodigo">Código</span>
+        </div>
+        <input type="number" class="form-control" name="codigo">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="filtroAlbum">Album</span>
+        </div>
+        <input type="text" class="form-control" name="album">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="filtroArtista">Artista</span>
+        </div>
+        <input type="text" class="form-control" name="artista">
+    </div>
+    <div>
+        <input type="submit" value="Filtrar" class="btn btn-primary pull-left"/>
+    </div>
+</div>
+}
+<br>
+<div class="container">
+    <table class="table table-striped" >
+        <tr>
+            <th>Album Id</th>
+            <th>Nombre</th>
+            <th>Artista</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => item.AlbumId)</td>
+                <td>@Html.DisplayFor(model => item.Title)</td>
+                <td>@Html.DisplayFor(model => item.Artist.Name)</td>
+            </tr>
+        }
+    </table>
+    <div class="text-center">
+        @for(int i = 1; i <= ViewBag.Pages; i++)
+        {
+            if(i == ViewBag.ActualPage)
+            {
+                @Html.ActionLink($"{i} ", "Index", new { page = i }, new { @class = "text-danger" });
+            }
+            else
+            {
+                @Html.ActionLink($"{i} ", "Index", new { page = i });
+            }
+        }
+    </div>
+</div>
