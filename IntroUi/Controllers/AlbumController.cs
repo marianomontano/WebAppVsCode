@@ -22,7 +22,7 @@ namespace IntroUi.Controllers
 
         public IActionResult Index(string codigo, string album, string artista, int page = 1)
         {
-            int pageSkip = 10 * (page - 1);
+            int pageSkip = 25 * (page - 1);
 
             var albums = _context.Albums
                 .Include(a => a.Artist)
@@ -44,10 +44,10 @@ namespace IntroUi.Controllers
                 albums = albums.Where(a => a.Artist.Name.Contains(artista)).ToList();
             }
 
-            ViewBag.Pages = (albums.Count / 10) + 1;
+            ViewBag.Pages = (albums.Count / 25) + 1;
             ViewBag.ActualPage = page;
             
-            albums = albums.Skip(pageSkip).Take(10).ToList();
+            albums = albums.Skip(pageSkip).Take(25).ToList();
 
             return View(albums);
         }

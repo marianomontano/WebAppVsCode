@@ -21,7 +21,7 @@ namespace IntroUi.Models
         public string Composer { get; set; }
         public long Milliseconds { get; set; }
         public long? Bytes { get; set; }
-        public byte[] UnitPrice { get; set; }
+        public decimal UnitPrice { get; set; }
 
         public virtual Album Album { get; set; }
         public virtual Genre Genre { get; set; }

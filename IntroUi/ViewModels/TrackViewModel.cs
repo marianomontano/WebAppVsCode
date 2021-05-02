@@ -8,6 +8,6 @@ namespace IntroUi.ViewModels
         public string Name { get; set; }
         public int Duration { get; set; }
         public string Genre { get; set; } 
-        public byte[] Price { get; set; }
+        public decimal Price { get; set; }
     }
 }

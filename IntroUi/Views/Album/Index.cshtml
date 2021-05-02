@@ -42,22 +42,26 @@
         {
             <tr>
                 <td>@Html.DisplayFor(model => item.AlbumId)</td>
-                <td>@Html.DisplayFor(model => item.Title)</td>
+                <td>@Html.ActionLink(item.Title, "Details", new { albumId = item.AlbumId })</td>
                 <td>@Html.DisplayFor(model => item.Artist.Name)</td>
             </tr>
         }
     </table>
     <div class="text-center">
-        @for(int i = 1; i <= ViewBag.Pages; i++)
-        {
-            if(i == ViewBag.ActualPage)
+        <nav aria-label="...">
+            <ul class="list-inline text-justify pagination">
+            @for(int i = 1; i <= ViewBag.Pages; i++)
             {
-                @Html.ActionLink($"{i} ", "Index", new { page = i }, new { @class = "text-danger" });
+                if(i == ViewBag.ActualPage)
+                {
+                    <li class="page-item active">@Html.ActionLink($"{i} ", "Index", new { page = i }, new { @class = "page-link" })</li>
+                }
+                else
+                {
+                    <li class="page-item">@Html.ActionLink($"{i} ", "Index", new { page = i }, new { @class = "page-link" })</li>
+                }
             }
-            else
-            {
-                @Html.ActionLink($"{i} ", "Index", new { page = i });
-            }
-        }
+            </ul>
+        </nav>
     </div>
 </div>

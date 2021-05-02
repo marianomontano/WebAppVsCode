@@ -1,0 +1,34 @@
+@model IntroUi.ViewModels.AlbumDetailViewModel
+@{
+    ViewData["Title"] = "Detalle del album";
+}
+
+<h1>@Model.Title</h1>
+<h3>@Model.Artist</h3>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <th>Nro de Canción</th>
+            <th>Nombre</th>
+            <th>Duración</th>
+            <th>Género</th>
+            <th>Precio</th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Tracks)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => item.TrackId)</td>
+                    <td>@Html.DisplayFor(model => item.Name)</td>
+                    <td>@Html.DisplayFor(model => item.Duration)</td>
+                    <td>@Html.DisplayFor(model => item.Genre)</td>
+                    <td>@Html.DisplayFor(model => item.Price)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        @Html.ActionLink("Volver al listado", "Index", new { page = 1 }, new { @class = "btn btn-primary pull-right" })
+    </div>
+</div>
