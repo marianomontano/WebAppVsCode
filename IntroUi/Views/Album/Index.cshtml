@@ -43,7 +43,7 @@
             <tr>
                 <td>@Html.DisplayFor(model => item.AlbumId)</td>
                 <td>@Html.ActionLink(item.Title, "Details", new { albumId = item.AlbumId })</td>
-                <td>@Html.DisplayFor(model => item.Artist.Name)</td>
+                <td>@Html.ActionLink(item.Artist.Name, "Details", "Artist", new { artistId = item.Artist.ArtistId })</td>
             </tr>
         }
     </table>

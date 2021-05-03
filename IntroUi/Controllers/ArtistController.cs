@@ -37,5 +37,23 @@ namespace IntroUi.Controllers
 
             return View(artists);
         }
+
+        [HttpGet]
+        [Route("Artist/Details/{artistId}")]
+        public IActionResult Details(int? artistId)
+        {
+            long id = Convert.ToInt32(artistId);
+            var artist = _context.Artists
+                .Include(a => a.Albums)
+                .ToList()
+                .First(x => x.ArtistId == id);
+
+            if(artist == null)
+            {
+                return NotFound();
+            }
+
+            return View(artist);
+        }
     }
 }
