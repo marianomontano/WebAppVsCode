@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ePC4wboOgmY8jNbsUEnjVVkeD1s0kBKIHqAKr/gjpVWYnMFcNdVLItoICa6SjBlbQKw1hTyCnVmWGb0RIN1f1w==",
+  "dgSpecHash": "r8s+dKYDWDUjELKP7nFIPS00W3h7v2tmnSsxMOBnbbNsAsGiGyecrS8AD1RKFH+yhSK0PO+RNYLKdHOFhi+qIA==",
   "success": true,
-  "projectFilePath": "/home/mariano/Source/vsCodeIntro/IntroUi/IntroUi.csproj",
+  "projectFilePath": "/home/mariano/RiderProjects/WebAppVsCode/IntroUi/IntroUi.csproj",
   "expectedPackageFiles": [
     "/home/mariano/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/mariano/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",

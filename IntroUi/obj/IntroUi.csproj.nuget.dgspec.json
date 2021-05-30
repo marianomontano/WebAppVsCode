@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/mariano/Source/vsCodeIntro/IntroUi/IntroUi.csproj": {}
+    "/home/mariano/RiderProjects/WebAppVsCode/IntroUi/IntroUi.csproj": {}
   },
   "projects": {
-    "/home/mariano/Source/vsCodeIntro/IntroUi/IntroUi.csproj": {
+    "/home/mariano/RiderProjects/WebAppVsCode/IntroUi/IntroUi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mariano/Source/vsCodeIntro/IntroUi/IntroUi.csproj",
+        "projectUniqueName": "/home/mariano/RiderProjects/WebAppVsCode/IntroUi/IntroUi.csproj",
         "projectName": "IntroUi",
-        "projectPath": "/home/mariano/Source/vsCodeIntro/IntroUi/IntroUi.csproj",
+        "projectPath": "/home/mariano/RiderProjects/WebAppVsCode/IntroUi/IntroUi.csproj",
         "packagesPath": "/home/mariano/.nuget/packages/",
-        "outputPath": "/home/mariano/Source/vsCodeIntro/IntroUi/obj/",
+        "outputPath": "/home/mariano/RiderProjects/WebAppVsCode/IntroUi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mariano/.nuget/NuGet/NuGet.Config"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.409/RuntimeIdentifierGraph.json"
         }
       }
     }
